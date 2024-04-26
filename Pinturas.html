@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinturas</title>
+    <link rel="stylesheet" href="tayl.css">
+</head>
+
+<body>
+    <h1>Pinturas famosas de Vincent van Gogh</h1>
+    <div id="contenedor">
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    const pinturas = [
+    { nombre: "La noche estrellada", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Los girasoles", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Campo de trigo con cipreses", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Autorretrato con oreja vendada", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Terraza de café por la noche", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Los comedores de patatas", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Retrato del doctor Gachet", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "El dormitorio en Arlés", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "Campo de trigo con cuervos", tipo: "Pintura al óleo sobre lienzo" },
+    { nombre: "La iglesia de Auvers-sur-Oise", tipo: "Pintura al óleo sobre lienzo" }
+    ];
+
+    const contenedor = document.getElementById('contenedor');
+
+    pinturas.forEach(pinturas2 => {
+        const div = document.createElement('div');
+        div.className = 'pinturas';
+        div.innerHTML = `<strong>Nombre:</strong> ${pinturas2.nombre} <br> <strong>Tipo:</strong> ${pinturas2.tipo} `;
+        contenedor.appendChild(div);
+    });
+</script>
